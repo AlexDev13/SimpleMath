@@ -1,3 +1,4 @@
+using System.Runtime.ConstrainedExecution;
 using System;
 
 namespace Program
@@ -7,10 +8,19 @@ namespace Program
         static void Main()
         {
             Math math = new Math("the number: ");
-            Console.WriteLine("Sum: {0}",math.Sum(12,10,1));
-            Console.WriteLine("Multiply: {0}",math.Multiply(12,10,1));
-            Console.WriteLine("Substract: {0}",math.Substract(12,10,1));
-            Console.WriteLine("Division: {0}",math.Division(12,10,1));
+            int i;
+            double[] arr = new double[100];
+            i = 0;
+            do{
+                arr[i] = Convert.ToDouble(Console.ReadLine());
+                i = i+1;
+             
+                
+            }while(Console.ReadLine()!="/");
+            Console.WriteLine("Sum: {0}",math.Sum(arr[i]));
+            // Console.WriteLine("Multiply: {0}",math.Multiply(12,10,1));
+            // Console.WriteLine("Substract: {0}",math.Substract(12,10,1));
+            // Console.WriteLine("Division: {0}",math.Division(12,10,1));
 
         }
     }
